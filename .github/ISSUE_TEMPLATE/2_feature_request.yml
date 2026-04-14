@@ -1,0 +1,50 @@
+name: 💡 Feature Request
+description: Suggest an idea or a new tool for OmniKit. Let's make it better together.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an idea to make OmniKit even better! 🚀
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: 🎯 Request Type
+      options:
+        - Brand new tool
+        - Enhancement to an existing tool
+        - UI/UX Improvement
+    validations:
+      required: true
+  - type: textarea
+    id: idea_description
+    attributes:
+      label: 📝 Idea Description
+      description: What is the feature you want? How should it work?
+      placeholder: I would like an OmniKit tool that allows me to...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 What problem does this solve?
+      description: What specific need or pain point does this feature address?
+      placeholder: Currently, every time I need to do this, I have to open 3 different tools which takes a lot of time...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔍 Have you tried any alternatives?
+      description: Are there any other apps or websites that do this well? (For reference)
+      placeholder: Site abc.com has this feature but the UI is hard to use...
+    validations:
+      required: false
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 📋 Additional Context
+      description: Add any other context, mockups, or screenshots about the feature request here.
+    validations:
+      required: false

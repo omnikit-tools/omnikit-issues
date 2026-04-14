@@ -1,0 +1,76 @@
+name: 🐛 Bug Report
+description: Report a bug or issue you encountered while using OmniKit.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this! 
+        Please provide the following information so we can reproduce and fix the bug quickly.
+  - type: input
+    id: tool_name
+    attributes:
+      label: 🛠️ Tool Name
+      description: Which OmniKit tool is experiencing the issue? (e.g., JSON Formatter, Base64 Encoder,...)
+      placeholder: e.g., JSON Formatter
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: The error occurs when I paste a JSON string, the tool fails to parse it and displays an error...
+    validations:
+      required: true
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Please list the exact steps we need to take to reproduce the issue.
+      placeholder: |
+        1. Go to OmniKit
+        2. Select the [Tool Name] tool
+        3. Input data...
+        4. Click on...
+        5. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: The tool should display the formatted JSON instead of showing an error.
+    validations:
+      required: false
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 🌐 Browser / Environment
+      description: What browser are you using?
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Edge
+        - Brave
+        - Other (Please specify in 'OS')
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 💻 Operating System
+      description: Are you using Windows, macOS, Linux, Android, or iOS?
+      placeholder: e.g., macOS Sonoma 14.4 / Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots / Video
+      description: If applicable, add screenshots or video to help explain your problem. (Optional)
+    validations:
+      required: false
